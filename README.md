@@ -33,6 +33,6 @@ The callback function is where you specify what actually gets output in the colu
 
 ```php
 function my_column_callback() {
-  // render column contents here
+  echo 'This is the content for my custom column!';
 }
 ```
