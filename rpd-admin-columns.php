@@ -75,11 +75,7 @@ class RPD_Admin_Columns {
   public function render_columns( $col_key, $post_id ) {
     foreach ( $this->cols_to_add as $col ) {
 
-      $func = __NAMESPACE__ .'\\'. $col['callback'];
-
-      if ( !function_exists($func) ) {
-        break;
-      }
+      $func = $col['callback'];
 
       if ( $col_key === $col['key'] ) {
         call_user_func( $func, $post_id );
