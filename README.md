@@ -32,7 +32,7 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\add_admin_columns');
 The callback function is where you specify what actually gets output in the column. Each column can have a unique callback or share one with another column.
 
 ```php
-function my_column_callback() {
+function my_column_callback( $post_id ) {
   echo 'This is the content for my custom column!';
 }
 ```
